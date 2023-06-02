@@ -1,0 +1,46 @@
+*{
+    background-image: url('imgs/ClueScroll.png');
+    background-repeat: no-repeat;     
+    background-position-x: center;
+    background-position-y: 55px;
+}
+.wrapper{
+    
+    
+}
+
+.search-boxes{
+    
+    text-align: center;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 16px 50px;
+    font-weight: 14px;    
+}
+
+button{
+    
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+ul{
+    
+   margin-left:550px;
+    margin-top: 300px;
+    
+    background: transparent;
+  
+}
+
+ul li{
+    background: transparent;
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    
+    border: none;
+    outline: none;     
+}
