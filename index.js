@@ -24,4 +24,3 @@ function getItemId(name){
     fetch(`https://oldschool.runescape.wiki/w/${name}`).then()
 
 }
-searchGE();
