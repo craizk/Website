@@ -4,52 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Runescape Website</title>
+    <title>Pokedex</title>
 </head>
 
-<body>
+<body id="body">
     
     <section class="input_section">
         <div class="Background_Image">
-            <img src="imgs/ClueScroll.png" id="ClueScroll"> 
+            <img src="imgs/pokedex_blank.png" id ="pokeDex"alt="">
         </div>
         <div class="search-boxes">        
-            <input type="text" id="itemToInput" placeholder="Search the G.E." >
-            <button onclick="price()" id="Search"> Search</button>
+            <input type="text" id="itemToInput" placeholder="Search the Pokemon" >
+            <img src="imgs/pokeball.jpg" id="pokeball" alt="">
+            <button onclick="findPokemon()" id="Search"> Search</button>
         </div>
     </section>
     
     <section class="Side_Info">
         <div class ="side_bar">
-            <a href="https://runescape.wiki/w/List_of_quests">Quests</a>
-            <a href="">Items</a>
-            <a href="">IDK</a>
-            <a href="">Who Knows</a>
+            <a href="">Moves</a>
+            <a href="">Evolutions</a>
+            <a href="">Games</a>
+            <a href="">Encountered In</a>
         </div>
 
     </section>
 
     <section class="Returned_Items">
-        <ul id="unordered">
-            
-              
-             <li> description</li>
-             <li>price</li>
-        </ul>
+        <div id="sprite"></div>
+        <div id="pokeName"></div>
+        <div id="pokeTypes"></div>
 
 
     </section>
         
-    
-    
-    
-    
-        <!-- <ul id="unordered">
-            
-              
-             <li> description</li>
-             <li>price</li>
-        </ul> -->
 
     
 
