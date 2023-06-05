@@ -48,6 +48,16 @@ body{
     transform: scale(5);
 }
 
+#poke_info{
+    right: 15%;
+    top: 55%;
+    position: absolute;
+    column-span: 8;
+    border: none;
+    outline: none;
+    background: transparent;
+    
+}
 
 
 
