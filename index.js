@@ -64,6 +64,16 @@ update.href=`https://pokemon.fandom.com/wiki/${name}#Locations`
 
 }
 
+showEvolveChain(){
+    //https://pokeapi.co/api/v2/pokemon-species/1/
+    //https://pokeapi.co/api/v2/evolution-chain/1/
+    const url1= await fetch("https://pokeapi.co/api/v2/pokemon/bulbasaur")
+    .then(response=>response.json()).then(data=>data.species.url)
+    const url2=await fetch(url1).then(response=>response.json()).then(data=>data.evolution_chain.url)
+
+    fetch(url2).then(response=>response.json()).then(data=>console.log(data))
+
+}
 
     
 
