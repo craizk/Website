@@ -5,30 +5,19 @@ body{
     background-image: url("imgs/grass_pokemon.jpg");
     background-repeat: no-repeat;
     object-fit: cover;
-  }
-  
-  
-    
-
+  } 
 .search-boxes #pokeball{
     right: 8.8%;
     position: absolute;
     top: 70%;
     height: 150px;
-    border-radius: 70px;
-    
+    border-radius: 70px;   
 }
-.search-boxes #pokeball :hover{
-    background-color: yellow;    
-}
-
 #pokeDex{
     right: 0%;
     position: absolute;
     height: 1000px;
 }
-
-
 #itemToInput{
     border-radius: 40px;
     top: 58%;
@@ -37,15 +26,30 @@ body{
     position: absolute ;
     background-color: teal;
 }
+/* button search  */
 #Search{
-    top: 58%;
-    right: 4%;
-    size-adjust: 1000%;
+    top: 76.6%;
+    right: 11.7%;
+    width: 25px;
+    height: 26px;
     text-align: center;
     position: absolute ;
-    border-radius: 10px;
-
+    border-radius: 50px;
+    cursor: pointer;
 }
+#Search:hover{
+    background-color: yellow;
+}
+
+#sprite{
+    top: 30%;
+    right: 10%;
+    position: absolute;
+    transform: scale(5);
+}
+
+
+
 
 
 
