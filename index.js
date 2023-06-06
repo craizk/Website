@@ -69,6 +69,7 @@ const findPokemon= async()=>{
 
     updateSideBar();
     count=1;
+    i=0;
 
     
     
