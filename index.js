@@ -89,14 +89,14 @@ changeBackground();
 
 function updateSideBar(){
     let name=document.getElementById("pokeName").getElementsByTagName('p')[0].innerHTML
-let update=document.getElementById("Moves")
+    let update=document.getElementById("Moves")
 
 
-update.href=`https://pokemon.fandom.com/wiki/${name}#Learnset`
- update=document.getElementById("Evolutions")
-update.href=`https://pokemon.fandom.com/wiki/${name}#Evolution`
- update=document.getElementById("Locations")
-update.href=`https://pokemon.fandom.com/wiki/${name}#Locations`
+    update.href=`https://pokemon.fandom.com/wiki/${name}#Learnset`
+    update=document.getElementById("Evolutions")
+    update.href=`https://pokemon.fandom.com/wiki/${name}#Evolution`
+    update=document.getElementById("Locations")
+    update.href=`https://pokemon.fandom.com/wiki/${name}#Locations`
 
 
 }
