@@ -95,7 +95,7 @@ update.href=`https://pokemon.fandom.com/wiki/${name}#Learnset`
  update=document.getElementById("Evolutions")
 update.href=`https://pokemon.fandom.com/wiki/${name}#Evolution`
  update=document.getElementById("Locations")
-update.href=`https://pokemon.fandom.com/wiki/${name}#Game_info`
+update.href=`https://pokemon.fandom.com/wiki/${name}#Locations`
 
 
 }
