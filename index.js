@@ -83,7 +83,7 @@ const showEvolveChain =async ()=>{
 
     // Gets the current pokemons next evolution
     let name=document.getElementById("pokeName").getElementsByTagName('p')[0].innerHTML
-    
+    //console.log(name)
     const url1= await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
     .then(response=>response.json()).then(data=>data.species.url)
     const url2=await fetch(url1).then(response=>response.json()).then(data=>data.evolution_chain.url)
@@ -92,12 +92,12 @@ const showEvolveChain =async ()=>{
 
     const pokeName= await fetch(`https://pokeapi.co/api/v2/pokemon/${newEvolve}`)
     .then(response=>response.json()).then(data=>data.name);
-    // console.log(pokeName)
+     //console.log(pokeName)
 
     // plugging in the new pokemons inforamtion
     let img_url =await  fetch(`https://pokeapi.co/api/v2/pokemon/${pokeName}`)
     .then(response=>response.json()).then(data=>data.sprites.front_default)
-
+    
     // getting evolved species info
     const poke_url= await fetch(`https://pokeapi.co/api/v2/pokemon/${pokeName}`)
     .then(response=>response.json()).then(data=>data.species.url);
