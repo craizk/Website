@@ -1,5 +1,8 @@
+
+
+
 const findPokemon= async()=>{
-    
+        
     const name =document.getElementById("itemToInput").value
     updateSideBar();
    const pokeName= await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
@@ -43,7 +46,7 @@ const findPokemon= async()=>{
     console.log("Poke_data",poke_data);
 
     
-    return pokeType
+    
 }
 
 const changeBackground=async()=>{
@@ -56,6 +59,8 @@ const changeBackground=async()=>{
 
 }
 changeBackground();
+
+
 function updateSideBar(){
 let update=document.getElementById("Moves")
 let name=document.getElementById("itemToInput").value;
@@ -70,16 +75,26 @@ update.href=`https://pokemon.fandom.com/wiki/${name}#Game_info`
 }
 
 const showEvolveChain =async ()=>{
+
+    // Gets the current pokemons next evolution
     let name=document.getElementById("itemToInput").value
     const url1= await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
     .then(response=>response.json()).then(data=>data.species.url)
     const url2=await fetch(url1).then(response=>response.json()).then(data=>data.evolution_chain.url)
-    const newEvolve = await fetch(url2).then(response=>response.json()).then(data=>console.log(data.chain.evolves_to[0].species.name))
+    const newEvolve = await fetch(url2).then(response=>response.json()).then(data=>data.chain.evolves_to[0].species.name)
+    // takes the new pokemons name and goes to display the data
 
+    const pokeName= await fetch(`https://pokeapi.co/api/v2/pokemon/${newEvolve}`)
+    .then(response=>response.json()).then(data=>data.name);
+    console.log(pokeName)
+    // plugging in the new pokemons inforamtion
+
+    let img =document.getElementById("sprite2")
+    
+    img.src= await fetch(`https://pokeapi.co/api/v2/pokemon/${pokeName}`);
     Container=document.getElementById("sprite2");
-    Container.appendChild(img);
-
-}
+    Container.replaceChild(img,Container.childNodes[0])
+}   
 
     
 
