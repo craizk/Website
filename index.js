@@ -116,7 +116,7 @@ const showEvolveChain =async ()=>{
             
         }
         else{
-            i=0;
+            
            return await fetch(url2).then(response=>response.json()).then(data=>data.chain.evolves_to[0].evolves_to[0].species.name)
         }
     } 
