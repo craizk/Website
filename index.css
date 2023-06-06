@@ -21,6 +21,7 @@ body #background_image{
     height: 1000px;
     
 }
+
 #itemToInput{
     border-radius: 40px;
     top: 90%;
@@ -71,6 +72,13 @@ body #background_image{
     background: transparent;
     z-index: auto;
     
+}
+#pokeName{
+    position: absolute;
+    right: 8%;
+    top: 23%;
+    background-color: white;
+    border-radius: 10px;
 }
 #pokeTypes{
     position: absolute;
