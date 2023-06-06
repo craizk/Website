@@ -48,10 +48,10 @@ body #background_image{
 }
 
 #sprite{
-    top: 33%;
+    top: 38%;
     right: 10%;
     position: absolute;
-    transform: scale(4.5);
+    transform: scale(4);
     z-index: auto;
 }
 #sprite2{
@@ -75,16 +75,16 @@ body #background_image{
 }
 #pokeName{
     position: absolute;
-    right: 8%;
+    right: 6%;
     top: 23%;
-    background-color: white;
+    background-color: yellow;
     border-radius: 10px;
 }
 #pokeTypes{
     position: absolute;
     right: 1.8%;
     top: 23%;
-    background-color: white;
+    background-color: yellow;
 
     border-radius: 10px;
 }

@@ -109,14 +109,27 @@ const showEvolveChain =async ()=>{
     .then(response=>response.json()).then(data=>data.species.url)
     const url2=await fetch(url1).then(response=>response.json()).then(data=>data.evolution_chain.url)
     
-    const newEvolve = await fetch(url2).then(response=>response.json()).then(data=>data.chain.evolves_to[0].species.name)
+    const newEvolve= async () => {
+        if(i==0){
+            i++;
+            return await fetch(url2).then(response=>response.json()).then(data=>data.chain.evolves_to[0].species.name)
+            
+        }
+        else{
+            i=0;
+           return await fetch(url2).then(response=>response.json()).then(data=>data.chain.evolves_to[0].evolves_to[0].species.name)
+        }
+    } 
+
+    const waitName =await newEvolve();
+    console.log(waitName)
     
     
          
     
     // takes the new pokemons name and goes to display the data
 
-    const pokeName= await fetch(`https://pokeapi.co/api/v2/pokemon/${newEvolve}`)
+    const pokeName= await fetch(`https://pokeapi.co/api/v2/pokemon/${waitName}`)
     .then(response=>response.json()).then(data=>data.name);
      console.log(pokeName)
 
