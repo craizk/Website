@@ -7,6 +7,7 @@ body #background_image{
     z-index: 0;
    
 }
+
 .search-boxes #pokeball{
     right: 8.8%;
     position: absolute;
@@ -46,11 +47,18 @@ body #background_image{
 }
 
 #sprite{
-    top: 30%;
+    top: 33%;
     right: 10%;
     position: absolute;
-    transform: scale(5);
+    transform: scale(4.5);
     z-index: auto;
+}
+#sprite2{
+    top: 55%;
+    right: 57%;
+    z-index: 2;
+    transform: scale(3);
+    position: absolute;
 }
 
 #poke_info{
@@ -63,6 +71,14 @@ body #background_image{
     background: transparent;
     z-index: auto;
     
+}
+#pokeTypes{
+    position: absolute;
+    right: 1.8%;
+    top: 23%;
+    background-color: white;
+
+    border-radius: 10px;
 }
 .side_bar{
     height: 25%; /* Full-height: remove this if you want "auto" height */
@@ -85,6 +101,22 @@ body #background_image{
 }
 .side_bar a:hover{
     background-color: beige;
+}
+#evolve{
+    position: absolute;
+    height: 50px;
+    width: 200px;
+    border-radius: 50px;
+    top: 71%;
+    right: 54%;
+    text-align: center;
+    background-color: rgb(183, 139, 30);
+    
+    
+}
+#evolve:hover{
+    background-color: #fab62e;
+
 }
 
 

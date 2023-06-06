@@ -23,10 +23,15 @@ const findPokemon= async()=>{
 
     poke_data=document.createElement("p");
     Container = document.getElementById("pokeTypes");
-    poke_data.innerHTML=pokeType ;
+    poke_data.innerHTML="Type:"+pokeType ;
     Container.appendChild(poke_data);
 
     Container=document.getElementById("sprite");
+    Container.appendChild(img);
+
+    img=document.createElement("img")
+    img.src=pokePicture;
+    Container=document.getElementById("sprite2");
     Container.appendChild(img);
 
     poke_data=document.createElement("textarea");
@@ -59,19 +64,20 @@ update.href=`https://pokemon.fandom.com/wiki/${name}#Learnset`
  update=document.getElementById("Evolutions")
 update.href=`https://pokemon.fandom.com/wiki/${name}#Evolution`
  update=document.getElementById("Locations")
-update.href=`https://pokemon.fandom.com/wiki/${name}#Locations`
+update.href=`https://pokemon.fandom.com/wiki/${name}#Game_info`
 
 
 }
 
-showEvolveChain(){
-    //https://pokeapi.co/api/v2/pokemon-species/1/
-    //https://pokeapi.co/api/v2/evolution-chain/1/
-    const url1= await fetch("https://pokeapi.co/api/v2/pokemon/bulbasaur")
+const showEvolveChain =async ()=>{
+    let name=document.getElementById("itemToInput").value
+    const url1= await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
     .then(response=>response.json()).then(data=>data.species.url)
     const url2=await fetch(url1).then(response=>response.json()).then(data=>data.evolution_chain.url)
+    const newEvolve = await fetch(url2).then(response=>response.json()).then(data=>console.log(data.chain.evolves_to[0].species.name))
 
-    fetch(url2).then(response=>response.json()).then(data=>console.log(data))
+    Container=document.getElementById("sprite2");
+    Container.appendChild(img);
 
 }
 
